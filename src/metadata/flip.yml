@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/flip
+
+idspace: FLIP
+base_url: /obo/flip
+
+products:
+- flip.owl: https://raw.githubusercontent.com/jralota/flipper/master/flip.owl
+- flip.obo: https://raw.githubusercontent.com/jralota/flipper/master/flip.obo
+
+term_browser: ontobee
+example_terms:
+- FLIP_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/jralota/flipper/v
+
+- prefix: /tracker/
+  replacement: https://github.com/jralota/flipper/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/FLIP?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/jralota/flipper/master/
